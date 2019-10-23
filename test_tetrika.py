@@ -46,13 +46,13 @@ def cypher_names():
         for i in range(len(names)):
             alphabetical_sum = sum(map(lambda x: ord(x) - 64, names[i]))
             result += alphabetical_sum * (i + 1)
-        print(result)
+        return result
 
 
 if __name__ == '__main__':
     test_pairs(search_pairs)
     print(search_pairs([1, 2, 6, 5, 3, 4, 7, 8, 3, 2], 5))
-    cypher_names()
+    print(cypher_names())
     test_zeros(get_zeros)
     print(get_zeros(5))
     print(get_zeros(12))
